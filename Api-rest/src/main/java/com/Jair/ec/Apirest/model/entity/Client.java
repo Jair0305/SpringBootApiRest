@@ -1,10 +1,7 @@
 package com.Jair.ec.Apirest.model.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -13,6 +10,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Builder
 @Table(name = "clients")
 @Entity
 public class Client implements Serializable {
@@ -23,8 +21,8 @@ public class Client implements Serializable {
     private Integer id;
     @Column(name = "name")
     private String name;
-    @Column(name = "last_name")
-    private String lastName;
+    @Column(name = "lastname")
+    private String lastname;
     @Column(name = "email")
     private String email;
     @Column(name="register_date")
